@@ -1,12 +1,12 @@
-const webpack = require('webpack')
-const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const cssnano = require('cssnano')
-const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin')
-const merge = require('webpack-merge')
-const webpackBase = require('./webpack.base.js')
+const webpack = require('webpack');
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const cssnano = require('cssnano');
+const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin');
+const merge = require('webpack-merge');
+const webpackBase = require('./webpack.base.js');
 
 const webpackConfig = merge(webpackBase, {
   entry: path.join(__dirname, '../app/main.js'),
@@ -32,6 +32,6 @@ const webpackConfig = merge(webpackBase, {
     new CleanWebpackPlugin(),
     new SpeedMeasureWebpackPlugin()
   ]
-})
+});
 
-module.exports = webpackConfig
+module.exports = webpackConfig;

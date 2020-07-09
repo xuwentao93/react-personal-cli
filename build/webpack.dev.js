@@ -1,8 +1,8 @@
-const webpack = require('webpack')
-const path = require('path')
-const merge = require('webpack-merge')
-const OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin')
-const webpackBase = require('./webpack.base')
+const webpack = require('webpack');
+const path = require('path');
+const merge = require('webpack-merge');
+const OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin');
+const webpackBase = require('./webpack.base');
 
 const webpackConfig = merge(webpackBase, {
   entry: path.join(__dirname, '../app/main.js'),
@@ -25,4 +25,4 @@ const webpackConfig = merge(webpackBase, {
   ]
 })
 
-module.exports = webpackConfig
+module.exports = webpackConfig;
